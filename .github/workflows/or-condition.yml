@@ -1,0 +1,10 @@
+name: Or Condition Demo
+on: push
+
+jobs:
+  demo: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run for Sindhu or Javahometech
+        if: github.actor == 'Sindhu' || github.actor == 'javahometech'
+        run: echo "It is triggered by either Sindhu or javahometech"
