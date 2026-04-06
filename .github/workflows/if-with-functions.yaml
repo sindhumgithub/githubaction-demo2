@@ -19,7 +19,9 @@ on:
       runs-on: ubuntu-latest
       steps:
         - name: Dev Deploy
-          run: echo "Deploying the code to development environment"
+          run: |
+            echo "Deploying the code to development environment"
+            exit 1
 
     prod_deploy:
       if: github.ref_name == 'main' && github.event_name == 'push'
